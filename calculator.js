@@ -9,16 +9,19 @@ const output = document.getElementById('resultNumber');
 const numbers = document.getElementsByClassName('calculator__buttons__number')
 const actions = document.getElementsByClassName('calculator__buttons__action')
 const handlePlusMinus = () => {
+    //меняем знак
     if (result.value != '0')  {
         result.value *= -1;
     }
 }
 const addDot = () => { 
+    //добавляем точку
     if (result.value.indexOf('.')===-1) {
         result.value +='.'
     }
 }
 const addNumber = (num) => { 
+    //добавляем число в поле
     if (result.value !== '0'){
         result.value += num
     }
@@ -27,6 +30,7 @@ const addNumber = (num) => {
     }
 }
 const addSign = (sign) => { 
+    //добавляем знак (+-/*)
     if (result.value !== '0') {
         result.value += sign;
         output.innerHTML+= result.value;
@@ -34,6 +38,7 @@ const addSign = (sign) => {
     }
 }
 const calc = () =>{
+    //вычисляем значение
     const value = output.innerHTML+ result.value;
     result.value = eval(value);
     output.innerHTML = '';
@@ -45,6 +50,7 @@ function resetValueAndOutput(){
     result.value = '0';
     output.innerHTML = '';
 }
+//привязываем обработчик нажатия на кнопку
 deleteString.addEventListener('click',resetResult);
 deleteAll.addEventListener('click',resetValueAndOutput);
 deleteOne.addEventListener('click',()=>{
@@ -59,6 +65,7 @@ for (let i = 0; i< numbers.length; i++){
 for ( let i = 0; i< actions.length; i++){
     actions[i].addEventListener('click',()=> addSign(actions[i].innerHTML))
 }
+//для того чтобы пользователь мог использовать кнопки на клаве
 document.addEventListener('keyup',(event) => {
     if (event.keyCode>='0' && event.keyCode<='9') addNumber(event.keyCode);
     for (let i = 0; i < actions.length;i++){
