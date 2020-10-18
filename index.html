@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    
+</head>
+<body>
+            <h1>Калькулятор</h1>
+            <div id="calc">
+                <div class="calculator__console">
+                    <div class="calculator__console__output">
+                        <span id="resultNumber" class="calculator__console__output__value"></span>
+                    </div>
+                    <input id="result" value='0' class="calculator__console__number" readonly></input>
+                </div>
+                <ul class="calculator__buttons"> 
+                    
+                    <li>
+                        <button class = "button" id="deleteString">CE</button>
+                        <button class = "button" id="deleteAll">C</button>
+                        <button class = "button" id="deleteOne">D</button>
+                        <button class = "button calculator__buttons__action" id="divide">/</button>
+                    </li>
+                    <li>
+                        <button  id="seven" class="calculator__buttons__number button">7</button>
+                        <button  id="eight" class="calculator__buttons__number button">8</button>
+                        <button  id="nine" class="calculator__buttons__number button" >9</button>
+                        <button  class = "button calculator__buttons__action" id="multiply">*</button>
+                    </li>
+                    <li>
+                        <button  id="four" class="calculator__buttons__number button">4</button>
+                        <button  id="five" class="calculator__buttons__number button">5</button>
+                        <button  id="six" class="calculator__buttons__number button">6</button>
+                        <button  class= "button calculator__buttons__action" id="minus">-</button>
+                    </li>
+                    <li>
+                        <button  id="one" class="calculator__buttons__number button">1</button>
+                        <button  id="two" class="calculator__buttons__number button">2</button>
+                        <button  id="three" class ="calculator__buttons__number button">3</button>
+                        <button  id="plus" class ="button calculator__buttons__action">+</button>
+                    </li>
+                    <li>
+                        <button class = "button " id="plusMinus">±</button>
+                        <button class="calculator__buttons__number button" id="zero">0</button>
+                        <button class = "button " id="dot">.</button>
+                        <button class = "button "id="equal">=</button>
+                    </li>
+                </ul>
+            </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
